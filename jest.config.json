@@ -1,1 +1,14 @@
-{}
+{
+  "moduleNameMapper": {
+    ".+\\.css$": "identity-obj-proxy"
+  },
+  "transform": {
+    ".+\\.jsx?$": "babel-jest"
+  },
+  "setupFiles": [
+    "./test/jestsetup.js"
+  ],
+  "snapshotSerializers": [
+    "./node_modules/enzyme-to-json/serializer"
+  ]
+}

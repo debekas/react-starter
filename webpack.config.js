@@ -5,10 +5,7 @@ const { resolve } = require('path');
 module.exports = {
   context: resolve(__dirname, 'src'),
   entry: {
-    bundle: [
-      'react-hot-loader/patch',
-      './index.js',
-    ],
+    bundle: ['react-hot-loader/patch', './index.js'],
   },
   output: {
     path: resolve(__dirname, 'dist'),
@@ -24,12 +21,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: 'babel-loader',
       },
       {
-        test: /\.css/,
+        test: /\.css$/,
         exclude: /node_modules/,
         use: [
           'style-loader',
